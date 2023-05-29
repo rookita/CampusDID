@@ -1,0 +1,20 @@
+directories:
+  output: ./CampusID/
+  buildResources: build
+appId: CampusID
+productName: CampusID
+extraFiles:
+  - from: CampusID/back_end/
+    to: resources/back_end
+win:
+  icon: ./build-resources/favico.ico
+  target:
+    - nsis
+nsis:
+  oneClick: false
+  perMachine: true
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: false
+files: []
+electronVersion: 24.4.0

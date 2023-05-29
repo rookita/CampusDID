@@ -1,0 +1,52 @@
+{
+  "name": "campusid",
+  "version": "1.0.0",
+  "description": "基于DID的高校身份认证系统",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron --trace-warnings .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-python": "pyinstaller -D -p c:\\users\\rookita\\.virtualenvs\\campusid-7lfbs6sl\\lib\\site-packages back_end/app.py  --distpath CampusID/back_end",
+    "build-electron": "electron-builder"
+  },
+  "build": {
+    "appId": "CampusID",
+    "productName": "CampusID",
+    "directories": {
+      "output": "./CampusID/"
+    },
+    "extraFiles": [
+      {
+        "from": "CampusID/back_end/",
+        "to": "resources/back_end"
+      }
+    ],
+    "win": {
+      "icon": "./build-resources/favico.ico",
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": false
+    }
+  },
+  "keywords": [
+    "did",
+    "ssi"
+  ],
+  "author": "rookita",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^24.4.0",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "ps-tree": "^1.2.0",
+    "python-shell": "^5.0.0"
+  }
+}

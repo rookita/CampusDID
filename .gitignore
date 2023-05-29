@@ -1,0 +1,7 @@
+#忽略npm下载的electron等文件
+/node_modules
+
+/build
+
+/CampusID/back_end
+/CampusID/win-unpacked
