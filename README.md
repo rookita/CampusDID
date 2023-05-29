@@ -14,7 +14,7 @@ npm install electron-builder --save-dev
 2.安装[python](https://www.python.org/),本项目python版本为3.10.9,并执行`pip3 install pipenv`安装虚拟环境和依赖管理工具,安装完成后执行`pipenv shell`和`pipenv install`即可。
 
 
-#使用
+# 使用
 
 `npm run build-python`将python打包为exe文件。
 `npm run build-electron`打包整个项目。
